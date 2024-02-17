@@ -149,6 +149,6 @@ translate([320,0,0])right_front_bottom();
 translate([0,236,405])left_front_top();
 translate([320,236,405])right_front_top();
 translate([0,30,20])rotate([-angle,0,0])left_middle_bottom();
-translate([298,30,20])rotate([-angle,0,0])translate([0,0,-220])right_middle_bottom();
+translate([298,30,20])rotate([-angle,0,0])right_middle_bottom();
 rotate([-angle,0,0])translate([0,19,c/2+18.7])left_middle_top();
 rotate([-angle,0,0])translate([298,19,c/2+18.7])right_middle_top();
