@@ -103,7 +103,6 @@ module left_middle_bottom(){
 }
 module left_middle_top(){
     union(){
-    
         difference(){
             translate([0,0,2])union(){
                 translate([4+tolerance,0,c/2+10])rotate([0,90,0])difference(){
@@ -113,8 +112,8 @@ module left_middle_top(){
                 difference(){
                     translate([0,-10,0])cube([22,20,c/2+10]);
                     translate([-0.1,-0,c/2+10])rotate([0,90,0])cylinder(h=54,d=screwhole+2*tolerance,$fn=32);
-    translate([-0.1,-0,10])rotate([0,90,0])cylinder(h=54,d=screwhole+2*tolerance,$fn=32);
-    translate([5.5+tolerance/2,-5.5+tolerance/2,-.1])cube([10+tolerance,10+tolerance,20+tolerance+.1]);
+                    translate([-0.1,-0,10])rotate([0,90,0])cylinder(h=54,d=screwhole+2*tolerance,$fn=32);
+                    translate([5.5+(tolerance/2),-5.5+tolerance/2,-tolerance])cube([11+tolerance,11+tolerance,20+tolerance]);
                 }
             }
             rotate([angle,0,0])translate([-.1,123.5,c/2-8.5])scale(1.02)union(){
@@ -150,6 +149,6 @@ translate([320,0,0])right_front_bottom();
 translate([0,236,405])left_front_top();
 translate([320,236,405])right_front_top();
 translate([0,30,20])rotate([-angle,0,0])left_middle_bottom();
-translate([298,30,20])rotate([-angle,0,0])right_middle_bottom();
+translate([298,30,20])rotate([-angle,0,0])translate([0,0,-220])right_middle_bottom();
 rotate([-angle,0,0])translate([0,19,c/2+18.7])left_middle_top();
 rotate([-angle,0,0])translate([298,19,c/2+18.7])right_middle_top();
